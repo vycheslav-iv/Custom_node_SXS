@@ -1,0 +1,405 @@
+{
+  "SXS": {
+    "display_name": "SXS Scene Prompt",
+    "description": "SXS scene generation prompt node.",
+    "inputs": {
+      "seed": {
+        "name": "Seed",
+        "tooltip": "Seed"
+      },
+      "Язык_меню": {
+        "name": "Menu language",
+        "tooltip": "Menu language"
+      },
+      "Язык_промпта": {
+        "name": "Prompt language",
+        "tooltip": "Prompt language"
+      },
+      "Управление": {
+        "name": "Control",
+        "tooltip": "Control"
+      },
+      "Девушки": {
+        "name": "Women",
+        "tooltip": "Women"
+      },
+      "Парни": {
+        "name": "Men",
+        "tooltip": "Men"
+      },
+      "Распределение": {
+        "name": "Distribution",
+        "tooltip": "Distribution"
+      },
+      "Авто_пары": {
+        "name": "Auto pairs",
+        "tooltip": "Auto pairs"
+      },
+      "Кто_с_кем": {
+        "name": "Who with whom",
+        "tooltip": "Who with whom"
+      },
+      "Фокус_на": {
+        "name": "Focus on",
+        "tooltip": "Focus on"
+      },
+      "Политика_отсутствующего": {
+        "name": "Missing policy",
+        "tooltip": "Missing policy"
+      },
+      "Пол_1": {
+        "name": "Gender 1",
+        "tooltip": "Gender 1"
+      },
+      "Пол_2": {
+        "name": "Gender 2",
+        "tooltip": "Gender 2"
+      },
+      "Пол_3": {
+        "name": "Gender 3",
+        "tooltip": "Gender 3"
+      },
+      "Пол_4": {
+        "name": "Gender 4",
+        "tooltip": "Gender 4"
+      },
+      "Пол_5": {
+        "name": "Gender 5",
+        "tooltip": "Gender 5"
+      },
+      "Пол_6": {
+        "name": "Gender 6",
+        "tooltip": "Gender 6"
+      },
+      "Пресет_сцены": {
+        "name": "Scene preset",
+        "tooltip": "Scene preset"
+      },
+      "Тип": {
+        "name": "Type",
+        "tooltip": "Type"
+      },
+      "Тип_выбирает_LLM": {
+        "name": "Type by LLM",
+        "tooltip": "Type by LLM"
+      },
+      "Этап_сцены": {
+        "name": "Scene stage",
+        "tooltip": "Scene stage"
+      },
+      "Куда_кончает": {
+        "name": "Finish target",
+        "tooltip": "Finish target"
+      },
+      "Тип_группа_basic": {
+        "name": "Basic types",
+        "tooltip": "Basic types"
+      },
+      "Тип_группа_same_sex": {
+        "name": "Same-sex types",
+        "tooltip": "Same-sex types"
+      },
+      "Тип_группа_group": {
+        "name": "Group types",
+        "tooltip": "Group types"
+      },
+      "Тип_группа_solo": {
+        "name": "Solo types",
+        "tooltip": "Solo types"
+      },
+      "Тип_группа_pov": {
+        "name": "POV types",
+        "tooltip": "POV types"
+      },
+      "Тип_группа_bdsm": {
+        "name": "BDSM types",
+        "tooltip": "BDSM types"
+      },
+      "Тип_группа_toys": {
+        "name": "Toys types",
+        "tooltip": "Toys types"
+      },
+      "Тип_группа_extreme": {
+        "name": "Extreme types",
+        "tooltip": "Extreme types"
+      },
+      "Совместимость": {
+        "name": "Compatibility",
+        "tooltip": "Compatibility"
+      },
+      "Взаимодействия": {
+        "name": "Interactions",
+        "tooltip": "Interactions"
+      },
+      "Эмоции": {
+        "name": "Emotions",
+        "tooltip": "Emotions"
+      },
+      "Темп": {
+        "name": "Tempo",
+        "tooltip": "Tempo"
+      },
+      "Одежда": {
+        "name": "Clothing",
+        "tooltip": "Clothing"
+      },
+      "Позы_выбирает_LLM": {
+        "name": "Poses by LLM",
+        "tooltip": "Poses by LLM"
+      },
+      "Позы_группа_stand": {
+        "name": "Stand poses",
+        "tooltip": "Stand poses"
+      },
+      "Позы_группа_sit": {
+        "name": "Позы_группа_sit",
+        "tooltip": "Позы_группа_sit"
+      },
+      "Позы_группа_lying": {
+        "name": "Позы_группа_lying",
+        "tooltip": "Позы_группа_lying"
+      },
+      "Позы_группа_dynamic": {
+        "name": "Позы_группа_dynamic",
+        "tooltip": "Позы_группа_dynamic"
+      },
+      "Позы_группа_mood": {
+        "name": "Позы_группа_mood",
+        "tooltip": "Позы_группа_mood"
+      },
+      "Позы_группа_modeling": {
+        "name": "Позы_группа_modeling",
+        "tooltip": "Позы_группа_modeling"
+      },
+      "Позы_группа_gesture": {
+        "name": "Позы_группа_gesture",
+        "tooltip": "Позы_группа_gesture"
+      },
+      "Позы_группа_sexual": {
+        "name": "Позы_группа_sexual",
+        "tooltip": "Позы_группа_sexual"
+      },
+      "Поза": {
+        "name": "Pose",
+        "tooltip": "Pose"
+      },
+      "Взгляд": {
+        "name": "Gaze",
+        "tooltip": "Gaze"
+      },
+      "Кто_сверху": {
+        "name": "Who on top",
+        "tooltip": "Who on top"
+      },
+      "Положение_камеры": {
+        "name": "Camera position",
+        "tooltip": "Camera position"
+      },
+      "Камера_выбирает_LLM": {
+        "name": "Camera by LLM",
+        "tooltip": "Camera by LLM"
+      },
+      "Ракурс": {
+        "name": "Angle",
+        "tooltip": "Angle"
+      },
+      "План": {
+        "name": "Shot",
+        "tooltip": "Shot"
+      },
+      "Фокус": {
+        "name": "Focus",
+        "tooltip": "Focus"
+      },
+      "Ракурсы_вкл": {
+        "name": "Angles enabled",
+        "tooltip": "Angles enabled"
+      },
+      "Планы_вкл": {
+        "name": "Shots enabled",
+        "tooltip": "Shots enabled"
+      },
+      "Фокусы_вкл": {
+        "name": "Focuses enabled",
+        "tooltip": "Focuses enabled"
+      },
+      "Уровень_камеры": {
+        "name": "Camera level",
+        "tooltip": "Camera level"
+      },
+      "POV": {
+        "name": "POV",
+        "tooltip": "POV"
+      },
+      "Композиция": {
+        "name": "Composition",
+        "tooltip": "Composition"
+      },
+      "Кроп": {
+        "name": "Crop",
+        "tooltip": "Crop"
+      },
+      "Куда_смотрит_камера": {
+        "name": "Camera target",
+        "tooltip": "Camera target"
+      },
+      "Зум": {
+        "name": "Zoom",
+        "tooltip": "Zoom"
+      },
+      "Окружение_выбирает_LLM": {
+        "name": "Environment by LLM",
+        "tooltip": "Environment by LLM"
+      },
+      "Фон": {
+        "name": "Background",
+        "tooltip": "Background"
+      },
+      "Освещение": {
+        "name": "Lighting",
+        "tooltip": "Lighting"
+      },
+      "Время_суток": {
+        "name": "Time of day",
+        "tooltip": "Time of day"
+      },
+      "Атмосфера": {
+        "name": "Atmosphere",
+        "tooltip": "Atmosphere"
+      },
+      "Сеттинг": {
+        "name": "Setting",
+        "tooltip": "Setting"
+      },
+      "Фоны_вкл": {
+        "name": "Backgrounds enabled",
+        "tooltip": "Backgrounds enabled"
+      },
+      "Фоны_простые_вкл": {
+        "name": "Simple backgrounds",
+        "tooltip": "Simple backgrounds"
+      },
+      "Фоны_студия_вкл": {
+        "name": "Studio backgrounds",
+        "tooltip": "Studio backgrounds"
+      },
+      "Фоны_город_вкл": {
+        "name": "City backgrounds",
+        "tooltip": "City backgrounds"
+      },
+      "Фоны_природа_вкл": {
+        "name": "Nature backgrounds",
+        "tooltip": "Nature backgrounds"
+      },
+      "Фоны_вода_вкл": {
+        "name": "Water backgrounds",
+        "tooltip": "Water backgrounds"
+      },
+      "Фоны_комнаты_вкл": {
+        "name": "Room backgrounds",
+        "tooltip": "Room backgrounds"
+      },
+      "Фоны_фэнтези_вкл": {
+        "name": "Fantasy backgrounds",
+        "tooltip": "Fantasy backgrounds"
+      },
+      "Свет_вкл": {
+        "name": "Lighting enabled",
+        "tooltip": "Lighting enabled"
+      },
+      "Время_вкл": {
+        "name": "Time enabled",
+        "tooltip": "Time enabled"
+      },
+      "Атмосфера_вкл": {
+        "name": "Atmosphere enabled",
+        "tooltip": "Atmosphere enabled"
+      },
+      "Сеттинг_вкл": {
+        "name": "Setting enabled",
+        "tooltip": "Setting enabled"
+      },
+      "Формат_промпта": {
+        "name": "Prompt format",
+        "tooltip": "Prompt format"
+      },
+      "Модель": {
+        "name": "Model",
+        "tooltip": "Model"
+      },
+      "Стиль": {
+        "name": "Style",
+        "tooltip": "Style"
+      },
+      "Качество": {
+        "name": "Quality",
+        "tooltip": "Quality"
+      },
+      "Quality_tokens": {
+        "name": "Quality tokens",
+        "tooltip": "Quality tokens"
+      },
+      "Всё_выбирает_LLM": {
+        "name": "All by LLM",
+        "tooltip": "All by LLM"
+      },
+      "Свобода_LLM": {
+        "name": "LLM freedom",
+        "tooltip": "LLM freedom"
+      },
+      "Запреты": {
+        "name": "Bans",
+        "tooltip": "Bans"
+      },
+      "Явные_термины": {
+        "name": "Explicit terms",
+        "tooltip": "Explicit terms"
+      },
+      "config": {
+        "name": "Config",
+        "tooltip": "Config"
+      },
+      "char_1": {
+        "name": "Char 1",
+        "tooltip": "Char 1"
+      },
+      "char_2": {
+        "name": "Char 2",
+        "tooltip": "Char 2"
+      },
+      "char_3": {
+        "name": "Char 3",
+        "tooltip": "Char 3"
+      },
+      "char_4": {
+        "name": "Char 4",
+        "tooltip": "Char 4"
+      },
+      "char_5": {
+        "name": "Char 5",
+        "tooltip": "Char 5"
+      },
+      "char_6": {
+        "name": "Char 6",
+        "tooltip": "Char 6"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "output_0"
+      },
+      "1": {
+        "name": "output_1"
+      },
+      "2": {
+        "name": "output_2"
+      },
+      "3": {
+        "name": "output_3"
+      },
+      "4": {
+        "name": "output_4"
+      }
+    }
+  }
+}
