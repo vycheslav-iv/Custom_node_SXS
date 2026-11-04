@@ -25,6 +25,12 @@ TYPE_GROUPS = {
     "extreme": ["fisting", "creampie", "bukkake", "facesitting", "public", "roleplay"],
 }
 
+# Список типов сцены с разделителями групп для комбо-виджета
+TYPE_DISPLAY = ["random"]
+for _group in ["basic", "same_sex", "group", "solo", "pov", "bdsm", "toys", "extreme"]:
+    TYPE_DISPLAY.append(f"--- {_group.upper()} ---")
+    TYPE_DISPLAY.extend(TYPE_GROUPS[_group])
+
 # minF, minM, minTotal, requires (toy/strapon/dp)
 TYPE_RULES = {
     "classic": {"minF": 1, "minM": 1, "minTotal": 2, "requires": ()},
@@ -220,6 +226,20 @@ BG_FANTASY = [
 BACKGROUNDS = (
     BG_SIMPLE + BG_STUDIO + BG_CITY + BG_NATURE + BG_WATER + BG_ROOM + BG_FANTASY
 )
+
+# Список фона с разделителями групп для комбо-виджета
+BG_DISPLAY = ["random"]
+for _group_name, _group_list in [
+    ("Простые", BG_SIMPLE),
+    ("Студия", BG_STUDIO),
+    ("Город", BG_CITY),
+    ("Природа", BG_NATURE),
+    ("Вода", BG_WATER),
+    ("Комнаты", BG_ROOM),
+    ("Фэнтези", BG_FANTASY),
+]:
+    BG_DISPLAY.append(f"--- {_group_name} ---")
+    BG_DISPLAY.extend(_group_list)
 
 LIGHTING = [
     "natural", "studio", "soft", "hard", "dramatic", "backlight",

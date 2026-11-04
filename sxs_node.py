@@ -75,7 +75,7 @@ class SXS:
             "Пресет_сцены": _combo(
                 ["none", "romance", "passion", "pov", "group", "bdsm", "solo"], "none"
             ),
-            "Тип": _combo(["random"] + sxs_data.TYPES, "random"),
+            "Тип": _combo(sxs_data.TYPE_DISPLAY, "random"),
             "Тип_выбирает_LLM": _bool(False),
             "Этап_сцены": _combo(sxs_data.STAGE_VALUES, "auto"),
             "Куда_кончает": _combo(sxs_data.FINISH_TARGETS, "auto"),
@@ -119,7 +119,7 @@ class SXS:
 
         required.update({
             "Окружение_выбирает_LLM": _bool(False),
-            "Фон": _combo(["random"] + sxs_data.BACKGROUNDS, "random"),
+            "Фон": _combo(sxs_data.BG_DISPLAY, "random"),
             "Освещение": _combo(["random"] + sxs_data.LIGHTING, "random"),
             "Время_суток": _combo(["auto"] + [x for x in sxs_data.TIMES if x != "auto"], "auto"),
             "Атмосфера": _combo(["auto"] + [x for x in sxs_data.ATMOSPHERES if x != "auto"], "auto"),
