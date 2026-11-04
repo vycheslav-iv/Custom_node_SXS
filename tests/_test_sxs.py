@@ -212,7 +212,7 @@ llm, model, warn, used_seed, cfg = out
 check("build: deterministic types", isinstance(llm, str) and isinstance(model, str) and isinstance(warn, str) and isinstance(used_seed, int) and isinstance(cfg, str))
 check("build: seed 0 -> int", used_seed >= 0)
 check("build: config parses", isinstance(json.loads(cfg), dict))
-check("build: LLM has sections", all(tag in llm for tag in ("[SYSTEM]", "[BRIEF]", "[ALLOWED]", "[RULES]")))
+check("build: LLM has sections", all(tag in llm for tag in ("[BRIEF]", "[ALLOWED]", "[RULES]")))
 check("build: MODEL non-empty", len(model) > 40, str(len(model)))
 check("build: no negative key in CONFIG", "negative" not in json.loads(cfg))
 check("build: no negative output", "negative" not in model.lower() and "негатив" not in model.lower())

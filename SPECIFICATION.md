@@ -173,15 +173,16 @@ kwargs ──► parse_config ──► resolve_characters ──► resolve_typ
 
 ## 5. Промпты
 
-`LLM PROMPT` — четыре блока:
+`LLM PROMPT` — три блока:
 
-1. `[SYSTEM]` — роль, 18+, сохранять внешность, не добавлять участников и
-   акты вне брифа, запрет несовершеннолетних, формат, модель, явность.
-2. `[BRIEF]` — JSON без `warnings`: персонажи, counts, type, emotion, tempo,
+1. `[BRIEF]` — JSON без `warnings`: персонажи, counts, type, emotion, tempo,
    camera, pairs, focus и др.
-3. `[ALLOWED]` — только делегированные поля и их допустимые значения; если
+2. `[ALLOWED]` — только делегированные поля и их допустимые значения; если
    делегирования нет — `(none; all values are fixed in BRIEF)`.
-4. `[RULES]` — ограничения сцены, совместимости, языка и терминов.
+3. `[RULES]` — ограничения сцены, совместимости, языка и терминов.
+
+Системный промт (`[SYSTEM]`) не выводится этой нодой — он задаётся отдельно
+в workflow или во внешней LLM-ноде.
 
 `MODEL PROMPT` — тот же бриф без LLM-инструкций. `concretize()` заменяет
 каждый `llm_choice` на значение из `allowed` по `MD5(seed + key)`.

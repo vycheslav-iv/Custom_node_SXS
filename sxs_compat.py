@@ -375,6 +375,9 @@ def resolve_choice(value, allowed, seed, key, use_llm=False, freedom="from_lists
         return {"mode": "llm_choice", "allowed": list(allowed)}
     if value in ("auto", "none", "", None):
         return value
+    if str(value).startswith("--- "):
+        chosen = pick(seed, key, allowed)
+        return chosen if chosen is not None else value
     if value == "random" or value not in allowed:
         chosen = pick(seed, key, allowed)
         return chosen if chosen is not None else value

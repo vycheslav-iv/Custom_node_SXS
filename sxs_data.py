@@ -124,6 +124,13 @@ POSE_GROUPS = {
 
 POSES = [token for group in POSE_GROUPS.values() for token in group]
 
+# Список poz с разделителями групп для комбо-виджета (как в Konst_Character_Gen)
+# Разделители начинаются с "--- " — они фильтруются в sxs_compat.resolve_choice.
+POSE_DISPLAY = ["random"]
+for _group in POSE_GROUPS:
+    POSE_DISPLAY.append(f"--- {_group.upper()} ---")
+    POSE_DISPLAY.extend(POSE_GROUPS[_group])
+
 ANGLES = [
     "front", "three_quarter_front", "three_quarter_left",
     "three_quarter_right", "side", "profile_left", "profile_right", "back",

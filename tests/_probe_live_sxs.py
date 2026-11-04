@@ -116,8 +116,8 @@ def main():
         else:
             print(f"  ok  {label}: {len(value)} chars")
 
-    if values[0] and "[SYSTEM]" not in values[0]:
-        failures.append("LLM PROMPT has no [SYSTEM]")
+    if values[0] and not values[0].strip():
+        failures.append("LLM PROMPT is empty")
     if values[1] and not values[1].strip():
         failures.append("MODEL PROMPT is empty")
     if values[1] and "ejaculating inside" not in values[1].lower():

@@ -95,7 +95,7 @@ class SXS:
         for group in sxs_data.POSE_GROUPS:
             required[f"Позы_группа_{group}"] = _bool(True)
         required.update({
-            "Поза": _combo(["random"] + sxs_data.POSES, "random"),
+            "Поза": _combo(sxs_data.POSE_DISPLAY, "random"),
             "Взгляд": _combo(["auto"] + [x for x in sxs_data.GAZES if x != "auto"], "auto"),
             "Кто_сверху": _combo(sxs_data.WHO_TOP, "auto"),
             "Положение_камеры": _combo(["auto"] + sxs_data.CAMERA_POSITIONS, "auto"),

@@ -274,7 +274,6 @@ def _allowed_section(brief):
 
 def build_llm_prompt(brief, lang="en"):
     lang = "ru" if str(lang).lower().startswith("ru") else "en"
-    system = sxs_phrases.SYSTEM[lang]
     rules = sxs_phrases.RULES[lang].format(
         format=sxs_phrases.t("format", brief.get("format", "natural"), lang),
         model=sxs_phrases.t("model", brief.get("model", "universal"), lang),
@@ -286,8 +285,6 @@ def build_llm_prompt(brief, lang="en"):
     )
     payload = {k: v for k, v in brief.items() if k != "warnings"}
     return (
-        "[SYSTEM]\n"
-        f"{system}\n\n"
         "[BRIEF]\n"
         f"{json.dumps(payload, ensure_ascii=False, indent=2)}\n\n"
         "[ALLOWED]\n"
