@@ -16,6 +16,7 @@
 - **Убран [SYSTEM] блок из LLM PROMPT** — системный промт задаётся отдельно (sxs_brief.py, тесты обновлены).
 - **Добавлены группы poz с разделителями** `--- Стоя ---`, `--- Сидя ---` и т.д. как в Konst_Character_Gen (sxs_data.py POSE_DISPLAY, sxs_compat.py фильтрация разделителей, web/js/sxs.js RU_LABELS для разделителей).
 - **Добавлены разделители групп для Типа сцены и Фона** — `--- Базовые ---`, `--- Однополые ---`, `--- Групповые ---` и т.д. для типа; `--- Простые ---`, `--- Студия ---`, `--- Город ---` и т.д. для фона (sxs_data.py TYPE_DISPLAY, BG_DISPLAY; sxs_node.py использует их вместо плоских списков; web/js/sxs.js переводы разделителей).
+- **Динамическая фильтрация комбо-списков на фронтенде** — при отключении группы типов/фона её варианты убираются из выпадающего списка виджета (web/js/sxs.js applyDisabled, TYPE_GROUP_MAP, BG_GROUP_MAP). Python-side `resolve_type`/`resolve_finish_target` дополнительно отфильтровывает недопустимые значения.
 - Обновили SPECIFICATION.md, README.md, тесты (_test_sxs.py, _probe_live_sxs.py).
 - Создан git-репозиторий SXS, запушен на github.com/vycheslav-iv/Custom_node_SXS (3 коммита).
 - AGENTS.md §6.1 — добавлена строка Custom_node_SXS.
@@ -38,6 +39,8 @@
 - `check_debug.txt` случайно попал в коммит — удалён, добавлен в `.gitignore`.
 - Тест `build: LLM has sections` проверял `[SYSTEM]` — обновлён на `[BRIEF]`, `[ALLOWED]`, `[RULES]`.
 - Live probe проверял presence of `[SYSTEM]` — обновлён.
+- JS-смоук проверял `options.values` неизменность — обновлён, разрешает динамическую фильтрацию через TYPE_GROUP_MAP/BG_GROUP_MAP.
+- Статический аудит проверял `options.values` присваивание — обновлён аналогично.
 
 ## 4. Что важно не сломать при продолжении работы
 
@@ -60,7 +63,7 @@
 - `sxs_brief.py` — сборка брифа, промпты (без [SYSTEM]).
 - `sxs_phrases.py` — RU/EN фразы, zoom macro.
 - `sxs_node.py` — INPUT_TYPES, seed randomize, Poz с POSE_DISPLAY.
-- `web/js/sxs.js` — метки, отключение Куда_кончает при stage != finish, переводы разделителей poz.
+- `web/js/sxs.js` — метки, отключение Куда_кончает при stage != finish, переводы разделителей poz, динамическая фильтрация комбо-списков типов и фона.
 - `locales/en/nodeDefs.json`, `locales/ru/nodeDefs.json` — 95 inputs, 5 outputs.
 - `tests/_test_sxs.py`, `tests/_smoke_sxs.mjs`, `tests/_audit_sxs.mjs` — все зелёные.
 - `tests/_probe_live_sxs.py` — LIVE PROBE OK.
