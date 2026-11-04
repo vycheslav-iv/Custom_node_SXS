@@ -15,6 +15,7 @@
 - Все 8 групп poz добавлены в локали (stand, sit, lying, dynamic, mood, modeling, gesture, sexual).
 - **Убран [SYSTEM] блок из LLM PROMPT** — системный промт задаётся отдельно (sxs_brief.py, тесты обновлены).
 - **Добавлены группы poz с разделителями** `--- Стоя ---`, `--- Сидя ---` и т.д. как в Konst_Character_Gen (sxs_data.py POSE_DISPLAY, sxs_compat.py фильтрация разделителей, web/js/sxs.js RU_LABELS для разделителей).
+- **Добавлены разделители групп для Типа сцены и Фона** — `--- Базовые ---`, `--- Однополые ---`, `--- Групповые ---` и т.д. для типа; `--- Простые ---`, `--- Студия ---`, `--- Город ---` и т.д. для фона (sxs_data.py TYPE_DISPLAY, BG_DISPLAY; sxs_node.py использует их вместо плоских списков; web/js/sxs.js переводы разделителей).
 - Обновили SPECIFICATION.md, README.md, тесты (_test_sxs.py, _probe_live_sxs.py).
 - Создан git-репозиторий SXS, запушен на github.com/vycheslav-iv/Custom_node_SXS (3 коммита).
 - AGENTS.md §6.1 — добавлена строка Custom_node_SXS.
@@ -22,7 +23,7 @@
 ## 2. Итоговое состояние кода
 
 - `sxs_data.py:149` — `ZOOMS = ["none", "closer", "farther", "macro"]`.
-- `sxs_data.py:162+` — `BG_SIMPLE`, `BG_STUDIO`, `BG_CITY`, `BG_NATURE`, `BG_WATER`, `BG_ROOM`, `BG_FANTASY`, `BACKGROUNDS`, `POSE_DISPLAY` (poz с разделителями групп).
+- `sxs_data.py:162+` — `BG_SIMPLE`, `BG_STUDIO`, `BG_CITY`, `BG_NATURE`, `BG_WATER`, `BG_ROOM`, `BG_FANTASY`, `BACKGROUNDS`, `POSE_DISPLAY`, `TYPE_DISPLAY` (poz и тип сцены с разделителями групп).
 - `sxs_compat.py` — `allowed_stages()`, `allowed_finish_targets()`, `resolve_stage()`, `resolve_finish_target()`, фильтрация "--- " разделителей в `resolve_choice`.
 - `sxs_brief.py` — `build_llm_prompt` без `[SYSTEM]` блока (только [BRIEF], [ALLOWED], [RULES]).
 - `sxs_node.py:55` — seed `control_after_generate = randomize`.
