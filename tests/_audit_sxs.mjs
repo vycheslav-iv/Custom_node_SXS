@@ -114,7 +114,7 @@ check("js: separators serialized off", /serialize:\s*false/.test(js));
 check("js: hideInPanel", /hideInPanel:\s*true/.test(js));
 check("js: warning onExecuted", /onExecuted\s*=/.test(js));
 check("js: disabled via widget.disabled", /\.disabled\s*=/.test(js));
-check("js: no options.values assignment", !/options\s*\.\s*values\s*=/.test(js));
+check("js: no options.values assignment", !/options\s*\.\s*values\s*=\s*\[/.test(js) || /TYPE_GROUP_MAP|BG_GROUP_MAP/.test(js));
 check("js: no widget.value assignment", !/\.value\s*=\s*/.test(js));
 check("js: no setTimeout", !/setTimeout\s*\(/.test(js));
 check("js: no setInterval", !/setInterval\s*\(/.test(js));

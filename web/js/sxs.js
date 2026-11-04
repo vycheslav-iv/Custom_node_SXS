@@ -555,6 +555,70 @@
       disabled.add('Окружение_выбирает_LLM');
     }
 
+    // ── фильтрация вариантов типа сцены по включённым группам ──
+    const TYPE_GROUP_MAP = {
+      'Тип_группа_basic': ['classic', 'oral', 'anal', 'fingering'],
+      'Тип_группа_same_sex': ['lesbian', 'gay'],
+      'Тип_группа_group': ['group', 'orgy', 'threesome', 'gangbang'],
+      'Тип_группа_solo': ['solo_f', 'solo_m'],
+      'Тип_группа_pov': ['pov'],
+      'Тип_группа_bdsm': ['bdsm', 'edging'],
+      'Тип_группа_toys': ['toys', 'strapon', 'double_penetration'],
+      'Тип_группа_extreme': ['fisting', 'creampie', 'bukkake', 'facesitting', 'public', 'roleplay'],
+    };
+    const TYPE_GROUP_LABEL = {
+      'Тип_группа_basic': '--- BASIC ---',
+      'Тип_группа_same_sex': '--- SAME_SEX ---',
+      'Тип_группа_group': '--- GROUP ---',
+      'Тип_группа_solo': '--- SOLO ---',
+      'Тип_группа_pov': '--- POV ---',
+      'Тип_группа_bdsm': '--- BDSM ---',
+      'Тип_группа_toys': '--- TOYS ---',
+      'Тип_группа_extreme': '--- EXTREME ---',
+    };
+    const typeWidget = widgetsOf(node).find((w) => w?.name === 'Тип');
+    if (typeWidget && typeWidget.options) {
+      const allowed = ['random'];
+      for (const [toggle, types] of Object.entries(TYPE_GROUP_MAP)) {
+        if (values[toggle] === true) {
+          allowed.push(TYPE_GROUP_LABEL[toggle]);
+          allowed.push(...types);
+        }
+      }
+      typeWidget.options.values = allowed;
+    }
+
+    // ── фильтрация вариантов фона по включённым группам ──
+    const BG_GROUP_MAP = {
+      'Фоны_простые_вкл': ['studio', 'cyclorama', 'white_cyclorama', 'black_studio', 'loft_studio', 'minimal_studio', 'neon_studio', 'vintage_studio', 'textured_wall'],
+      'Фоны_студия_вкл': ['photo_studio', 'interior_studio', 'natural_light_studio', 'softbox_studio', 'studio_with_props', 'studio_with_drapes', 'studio_with_mirrors', 'studio_with_columns', 'studio_with_flowers'],
+      'Фоны_город_вкл': ['city', 'night_city', 'rainy_city', 'street', 'alley', 'square', 'industrial_zone', 'skyscraper_roof', 'embankment', 'club', 'cafe', 'restaurant', 'subway', 'station', 'airport', 'balcony_city_view', 'backyard', 'garage'],
+      'Фоны_природа_вкл': ['forest', 'mountains', 'field', 'garden', 'desert', 'snow_landscape', 'flower_meadow', 'autumn_park', 'rocky_shore', 'foggy_forest', 'savanna', 'bamboo_grove', 'steppe', 'canyon', 'cave', 'volcano', 'glacier', 'lavender_field', 'vineyard', 'jungle', 'japanese_garden', 'heather_moor'],
+      'Фоны_вода_вкл': ['tropical_island', 'beach', 'sea', 'ocean', 'lake', 'mountain_lake', 'river', 'waterfall', 'pool', 'fountain', 'pond', 'swamp', 'seabed', 'coral_reef'],
+      'Фоны_комнаты_вкл': ['bedroom', 'bathroom', 'living_room', 'kitchen', 'library', 'grand_hall', 'balcony', 'terrace', 'mansion', 'loft', 'country_house', 'office', 'workshop', 'wardrobe', 'winter_garden', 'greenhouse', 'corridor', 'staircase', 'veranda', 'theater', 'museum', 'gallery', 'throne_hall', 'boudoir', 'hotel_room'],
+      'Фоны_фэнтези_вкл': ['sunset', 'sunrise', 'golden_hour', 'fog', 'blizzard', 'stormy_sky', 'night_sky', 'starry_night', 'moonlit_night', 'aurora', 'rainbow', 'castle', 'temple', 'ruins', 'space', 'fantasy_world', 'magic_forest', 'ancient_fortress', 'misty_mountains', 'underground_grotto', 'mystic_portal', 'fairy_palace', 'crystal_cave', 'floating_island', 'cursed_graveyard', 'astral', 'underwater_kingdom', 'romantic_world'],
+    };
+    const BG_GROUP_LABEL = {
+      'Фоны_простые_вкл': '--- Простые ---',
+      'Фоны_студия_вкл': '--- Студия ---',
+      'Фоны_город_вкл': '--- Город ---',
+      'Фоны_природа_вкл': '--- Природа ---',
+      'Фоны_вода_вкл': '--- Вода ---',
+      'Фоны_комнаты_вкл': '--- Комнаты ---',
+      'Фоны_фэнтези_вкл': '--- Фэнтези ---',
+    };
+    const bgWidget = widgetsOf(node).find((w) => w?.name === 'Фон');
+    if (bgWidget && bgWidget.options) {
+      const allowed = ['random'];
+      for (const [toggle, types] of Object.entries(BG_GROUP_MAP)) {
+        if (values[toggle] === true) {
+          allowed.push(BG_GROUP_LABEL[toggle]);
+          allowed.push(...types);
+        }
+      }
+      bgWidget.options.values = allowed;
+    }
+
     for (const widget of widgetsOf(node)) {
       if (!widget?.name) continue;
       widget.disabled = disabled.has(widget.name);

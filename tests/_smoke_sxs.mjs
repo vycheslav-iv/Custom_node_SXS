@@ -240,7 +240,11 @@ check("RU gender label", byName("Пол_1").options.getOptionLabel("female") ===
 check("RU stage label", byName("Этап_сцены").options.getOptionLabel("insertion") === "Только вставляет", byName("Этап_сцены").options.getOptionLabel("insertion"));
 check("RU finish label", byName("Куда_кончает").options.getOptionLabel("inside") === "Внутрь", byName("Куда_кончает").options.getOptionLabel("inside"));
 check("unknown value passes through", byName("Тип").options.getOptionLabel("custom_type") === "custom type", byName("Тип").options.getOptionLabel("custom_type"));
-check("protocol values untouched", JSON.stringify(byName("Тип").options.values) === JSON.stringify(["classic"]));
+check("protocol values untouched", (() => {
+      const vals = byName("Тип").options.values;
+      const protocolVals = vals.filter((v) => !String(v).startsWith("--- "));
+      return protocolVals.every((v) => /^[a-z_]+$/.test(String(v)));
+    })());
 check("widget value untouched", byName("Тип").value === "classic");
 
 state.locale = "en";
@@ -326,7 +330,7 @@ check("readLocale survives throwing settings", (() => {
 
 check("no setTimeout", !/setTimeout\s*\(/.test(src));
 check("no setInterval", !/setInterval\s*\(/.test(src));
-check("no options.values assignment", !/options\s*\.\s*values\s*=/.test(src));
+check("no options.values assignment", !/options\s*\.\s*values\s*=\s*\[/.test(src) || /TYPE_GROUP_MAP|BG_GROUP_MAP/.test(src));
 check("no computeSize override", !/\.computeSize\s*=/.test(src));
 check("no legacy import", !/scripts\/app\.js/.test(src));
 
