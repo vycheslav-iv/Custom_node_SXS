@@ -11,28 +11,30 @@
 - Сделали сид случайным по умолчанию: `control_after_generate = randomize` в виджете seed (sxs_node.py).
 - Переработали фоны: убраны meaningless (plain/white/black/gray/gradient), создано 7 групп (Простые, Студийные, Городские, Природные, Водные, Комнатные, Фэнтези) с независимыми тоглами `Фоны_*_вкл` (sxs_data.py, sxs_node.py, sxs_brief.py).
 - Добавили зум `macro` (экстремальный крупный план, 10–20 см) с фразой для LLM и генерационной модели (sxs_data.py, sxs_phrases.py).
-- Обновили locales (en/ru) — 95 inputs, 5 outputs; web/js/sxs.js — метки для новых виджетов и фонов.
+- **Исправлены локали**: widget labels и output names восстановлены (были перезаписаны placeholder-ами). 95 inputs, 5 outputs с правильными именами (LLM PROMPT, MODEL PROMPT, WARN, SEED, CONFIG).
+- Все 8 групп поз добавлены в локали (stand, sit, lying, dynamic, mood, modeling, gesture, sexual).
 - Обновили SPECIFICATION.md, README.md, тесты (_test_sxs.py, _smoke_sxs.mjs, _audit_sxs.mjs).
-- Создан git-репозиторий SXS, запушен на github.com/vycheslav-iv/Custom_node_SXS.
+- Создан git-репозиторий SXS, запушен на github.com/vycheslav-iv/Custom_node_SXS (2 коммита).
 - AGENTS.md §6.1 — добавлена строка Custom_node_SXS.
 
 ## 2. Итоговое состояние кода
 
 - `sxs_data.py:149` — `ZOOMS = ["none", "closer", "farther", "macro"]`.
-- `sxs_data.py:162+` — `BG_SIMPLE`, `BG_STUDIO`, `BG_CITY`, `BG_NATURE`, `BG_WATER`, `BG_ROOM`, `BG_FANTASY`, `BACKGROUNDS` (конкатенация всех групп).
+- `sxs_data.py:162+` — `BG_SIMPLE`, `BG_STUDIO`, `BG_CITY`, `BG_NATURE`, `BG_WATER`, `BG_ROOM`, `BG_FANTASY`, `BACKGROUNDS`.
 - `sxs_compat.py` — `allowed_stages()`, `allowed_finish_targets()`, `resolve_stage()`, `resolve_finish_target()`.
-- `sxs_brief.py:79-97` — разрешение этапа и.finish_target с WARN при невозможных значениях.
+- `sxs_brief.py:79-97` — разрешение этапа и finish_target с WARN при невозможных значениях.
 - `sxs_brief.py:300-303` — фраза этапа в MODEL PROMPT после типа сцены.
 - `sxs_node.py:55` — seed `control_after_generate = randomize`.
 - `sxs_node.py:121-133` — toggles групп фона в INPUT_TYPES.
 - `web/js/sxs.js:234` — метки Зума с macro; Фон — метки всех групп.
-- `locales/en|ru/nodeDefs.json` — 95 inputs, 5 outputs.
+- `locales/en|ru/nodeDefs.json` — 95 inputs, 5 outputs с правильными подписями.
 
 ## 3. Проблемы, которые встречались
 
-- Локали имела повреждённые кириллические ключи при записи JSON — исправлено перезаписью файлов с `ensure_ascii=False`.
-- Тест `locales: output parity` ожидал ключи "0"–"4" для outputs — исправлено в locale JSON.
-- `check_debug.txt` случайно попал в коммит — удалён из индекса, добавлен в `.gitignore`, коммит пересоздан.
+- Локали были перезаписаны с placeholder-метками (key: key) — исправлено полной перезаписью с корректными EN/RU подписями.
+- Outputs были "0"-"4" — исправлены на имена RETURN_NAMES.
+- Тест `locales: output parity` обновлён для проверки имён выходов.
+- `check_debug.txt` случайно попал в коммит — удалён, добавлен в `.gitignore`.
 
 ## 4. Что важно не сломать при продолжении работы
 
@@ -55,7 +57,7 @@
 - `sxs_phrases.py` — RU/EN фразы, zoom macro.
 - `sxs_node.py` — INPUT_TYPES, seed randomize.
 - `web/js/sxs.js` — метки, отключение Куда_кончает при stage != finish.
-- `locales/en/nodeDefs.json`, `locales/ru/nodeDefs.json` — 95 inputs.
+- `locales/en/nodeDefs.json`, `locales/ru/nodeDefs.json` — 95 inputs, 5 outputs.
 - `tests/_test_sxs.py`, `tests/_smoke_sxs.mjs`, `tests/_audit_sxs.mjs` — все зелёные.
 - `tests/_probe_live_sxs.py` — LIVE PROBE OK.
 - `SPECIFICATION.md` — обновлён.
