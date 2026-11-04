@@ -182,7 +182,7 @@ if len(locales) == 2:
     check("locales: input parity", set(en.get("inputs", {})) == set(ru.get("inputs", {})))
     check("locales: inputs cover schema", set(en.get("inputs", {})) == schema_names,
           str(schema_names ^ set(en.get("inputs", {}))))
-    check("locales: output parity", set(en.get("outputs", {})) == set(ru.get("outputs", {})) == {"0", "1", "2", "3", "4"})
+    check("locales: output parity", set(en.get("outputs", {})) == set(ru.get("outputs", {})) == {"LLM PROMPT", "MODEL PROMPT", "WARN", "SEED", "CONFIG"})
     check("locales: en display name", en.get("display_name") == "SXS Scene Prompt", str(en.get("display_name")))
     check("locales: ru display name", ru.get("display_name") == "SXS: промпт сцены", str(ru.get("display_name")))
     check("locales: descriptions non-empty", bool(en.get("description")) and bool(ru.get("description")))

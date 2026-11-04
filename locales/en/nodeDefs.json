@@ -5,259 +5,259 @@
     "inputs": {
       "seed": {
         "name": "Seed",
-        "tooltip": "Seed"
+        "tooltip": "Random seed for generation"
       },
       "Язык_меню": {
         "name": "Menu language",
-        "tooltip": "Menu language"
+        "tooltip": "Interface language override"
       },
       "Язык_промпта": {
         "name": "Prompt language",
-        "tooltip": "Prompt language"
+        "tooltip": "Language of generated prompts"
       },
       "Управление": {
         "name": "Control",
-        "tooltip": "Control"
+        "tooltip": "Generation control mode"
       },
       "Девушки": {
         "name": "Women",
-        "tooltip": "Women"
+        "tooltip": "Number of female characters"
       },
       "Парни": {
         "name": "Men",
-        "tooltip": "Men"
+        "tooltip": "Number of male characters"
       },
       "Распределение": {
         "name": "Distribution",
-        "tooltip": "Distribution"
+        "tooltip": "How characters are distributed"
       },
       "Авто_пары": {
         "name": "Auto pairs",
-        "tooltip": "Auto pairs"
+        "tooltip": "Automatically pair characters"
       },
       "Кто_с_кем": {
         "name": "Who with whom",
-        "tooltip": "Who with whom"
+        "tooltip": "Custom pairing JSON"
       },
       "Фокус_на": {
         "name": "Focus on",
-        "tooltip": "Focus on"
+        "tooltip": "Character to focus on"
       },
       "Политика_отсутствующего": {
         "name": "Missing policy",
-        "tooltip": "Missing policy"
+        "tooltip": "Policy for missing characters"
       },
       "Пол_1": {
         "name": "Gender 1",
-        "tooltip": "Gender 1"
+        "tooltip": "Gender of character 1"
       },
       "Пол_2": {
         "name": "Gender 2",
-        "tooltip": "Gender 2"
+        "tooltip": "Gender of character 2"
       },
       "Пол_3": {
         "name": "Gender 3",
-        "tooltip": "Gender 3"
+        "tooltip": "Gender of character 3"
       },
       "Пол_4": {
         "name": "Gender 4",
-        "tooltip": "Gender 4"
+        "tooltip": "Gender of character 4"
       },
       "Пол_5": {
         "name": "Gender 5",
-        "tooltip": "Gender 5"
+        "tooltip": "Gender of character 5"
       },
       "Пол_6": {
         "name": "Gender 6",
-        "tooltip": "Gender 6"
+        "tooltip": "Gender of character 6"
       },
       "Пресет_сцены": {
         "name": "Scene preset",
-        "tooltip": "Scene preset"
+        "tooltip": "Preset scene configuration"
       },
       "Тип": {
         "name": "Type",
-        "tooltip": "Type"
+        "tooltip": "Scene type"
       },
       "Тип_выбирает_LLM": {
         "name": "Type by LLM",
-        "tooltip": "Type by LLM"
+        "tooltip": "Delegate scene type to LLM"
       },
       "Этап_сцены": {
         "name": "Scene stage",
-        "tooltip": "Scene stage"
+        "tooltip": "Stage of the scene"
       },
       "Куда_кончает": {
         "name": "Finish target",
-        "tooltip": "Finish target"
+        "tooltip": "Where ejaculation lands"
       },
       "Тип_группа_basic": {
         "name": "Basic types",
-        "tooltip": "Basic types"
+        "tooltip": "Include basic scene types"
       },
       "Тип_группа_same_sex": {
         "name": "Same-sex types",
-        "tooltip": "Same-sex types"
+        "tooltip": "Include same-sex scene types"
       },
       "Тип_группа_group": {
         "name": "Group types",
-        "tooltip": "Group types"
+        "tooltip": "Include group scene types"
       },
       "Тип_группа_solo": {
         "name": "Solo types",
-        "tooltip": "Solo types"
+        "tooltip": "Include solo scene types"
       },
       "Тип_группа_pov": {
         "name": "POV types",
-        "tooltip": "POV types"
+        "tooltip": "Include POV scene types"
       },
       "Тип_группа_bdsm": {
         "name": "BDSM types",
-        "tooltip": "BDSM types"
+        "tooltip": "Include BDSM scene types"
       },
       "Тип_группа_toys": {
         "name": "Toys types",
-        "tooltip": "Toys types"
+        "tooltip": "Include toys scene types"
       },
       "Тип_группа_extreme": {
         "name": "Extreme types",
-        "tooltip": "Extreme types"
+        "tooltip": "Include extreme scene types"
       },
       "Совместимость": {
         "name": "Compatibility",
-        "tooltip": "Compatibility"
+        "tooltip": "Scene compatibility mode"
       },
       "Взаимодействия": {
         "name": "Interactions",
-        "tooltip": "Interactions"
+        "tooltip": "Scene interactions"
       },
       "Эмоции": {
         "name": "Emotions",
-        "tooltip": "Emotions"
+        "tooltip": "Character emotions"
       },
       "Темп": {
         "name": "Tempo",
-        "tooltip": "Tempo"
+        "tooltip": "Scene tempo"
       },
       "Одежда": {
         "name": "Clothing",
-        "tooltip": "Clothing"
+        "tooltip": "Clothing state"
       },
       "Позы_выбирает_LLM": {
         "name": "Poses by LLM",
-        "tooltip": "Poses by LLM"
+        "tooltip": "Delegate poses to LLM"
       },
       "Позы_группа_stand": {
         "name": "Stand poses",
-        "tooltip": "Stand poses"
+        "tooltip": "Include standing poses"
       },
       "Позы_группа_sit": {
-        "name": "Позы_группа_sit",
-        "tooltip": "Позы_группа_sit"
+        "name": "Sit poses",
+        "tooltip": "Include sitting poses"
       },
       "Позы_группа_lying": {
-        "name": "Позы_группа_lying",
-        "tooltip": "Позы_группа_lying"
+        "name": "Lie poses",
+        "tooltip": "Include lying poses"
       },
       "Позы_группа_dynamic": {
-        "name": "Позы_группа_dynamic",
-        "tooltip": "Позы_группа_dynamic"
+        "name": "Dynamic poses",
+        "tooltip": "Include dynamic poses"
       },
       "Позы_группа_mood": {
-        "name": "Позы_группа_mood",
-        "tooltip": "Позы_группа_mood"
+        "name": "Mood poses",
+        "tooltip": "Include mood poses"
       },
       "Позы_группа_modeling": {
-        "name": "Позы_группа_modeling",
-        "tooltip": "Позы_группа_modeling"
+        "name": "Modeling poses",
+        "tooltip": "Include modeling poses"
       },
       "Позы_группа_gesture": {
-        "name": "Позы_группа_gesture",
-        "tooltip": "Позы_группа_gesture"
+        "name": "Gesture poses",
+        "tooltip": "Include gesture poses"
       },
       "Позы_группа_sexual": {
-        "name": "Позы_группа_sexual",
-        "tooltip": "Позы_группа_sexual"
+        "name": "Sexual poses",
+        "tooltip": "Include sexual poses"
       },
       "Поза": {
         "name": "Pose",
-        "tooltip": "Pose"
+        "tooltip": "Character pose"
       },
       "Взгляд": {
         "name": "Gaze",
-        "tooltip": "Gaze"
+        "tooltip": "Character gaze direction"
       },
       "Кто_сверху": {
         "name": "Who on top",
-        "tooltip": "Who on top"
+        "tooltip": "Who is on top"
       },
       "Положение_камеры": {
         "name": "Camera position",
-        "tooltip": "Camera position"
+        "tooltip": "Camera position relative to subjects"
       },
       "Камера_выбирает_LLM": {
         "name": "Camera by LLM",
-        "tooltip": "Camera by LLM"
+        "tooltip": "Delegate camera to LLM"
       },
       "Ракурс": {
         "name": "Angle",
-        "tooltip": "Angle"
+        "tooltip": "Camera angle"
       },
       "План": {
         "name": "Shot",
-        "tooltip": "Shot"
+        "tooltip": "Camera shot size"
       },
       "Фокус": {
         "name": "Focus",
-        "tooltip": "Focus"
+        "tooltip": "Camera focus point"
       },
       "Ракурсы_вкл": {
         "name": "Angles enabled",
-        "tooltip": "Angles enabled"
+        "tooltip": "Enable camera angles"
       },
       "Планы_вкл": {
         "name": "Shots enabled",
-        "tooltip": "Shots enabled"
+        "tooltip": "Enable camera shots"
       },
       "Фокусы_вкл": {
         "name": "Focuses enabled",
-        "tooltip": "Focuses enabled"
+        "tooltip": "Enable camera focuses"
       },
       "Уровень_камеры": {
         "name": "Camera level",
-        "tooltip": "Camera level"
+        "tooltip": "Camera height level"
       },
       "POV": {
         "name": "POV",
-        "tooltip": "POV"
+        "tooltip": "Point of view mode"
       },
       "Композиция": {
         "name": "Composition",
-        "tooltip": "Composition"
+        "tooltip": "Frame composition"
       },
       "Кроп": {
         "name": "Crop",
-        "tooltip": "Crop"
+        "tooltip": "Crop area"
       },
       "Куда_смотрит_камера": {
         "name": "Camera target",
-        "tooltip": "Camera target"
+        "tooltip": "What the camera points at"
       },
       "Зум": {
         "name": "Zoom",
-        "tooltip": "Zoom"
+        "tooltip": "Zoom direction"
       },
       "Окружение_выбирает_LLM": {
         "name": "Environment by LLM",
-        "tooltip": "Environment by LLM"
+        "tooltip": "Delegate environment to LLM"
       },
       "Фон": {
         "name": "Background",
-        "tooltip": "Background"
+        "tooltip": "Scene background"
       },
       "Освещение": {
         "name": "Lighting",
-        "tooltip": "Lighting"
+        "tooltip": "Scene lighting"
       },
       "Время_суток": {
         "name": "Time of day",
@@ -265,140 +265,140 @@
       },
       "Атмосфера": {
         "name": "Atmosphere",
-        "tooltip": "Atmosphere"
+        "tooltip": "Scene atmosphere"
       },
       "Сеттинг": {
         "name": "Setting",
-        "tooltip": "Setting"
+        "tooltip": "Scene setting"
       },
       "Фоны_вкл": {
         "name": "Backgrounds enabled",
-        "tooltip": "Backgrounds enabled"
+        "tooltip": "Enable backgrounds"
       },
       "Фоны_простые_вкл": {
         "name": "Simple backgrounds",
-        "tooltip": "Simple backgrounds"
+        "tooltip": "Include simple backgrounds"
       },
       "Фоны_студия_вкл": {
         "name": "Studio backgrounds",
-        "tooltip": "Studio backgrounds"
+        "tooltip": "Include studio backgrounds"
       },
       "Фоны_город_вкл": {
         "name": "City backgrounds",
-        "tooltip": "City backgrounds"
+        "tooltip": "Include city backgrounds"
       },
       "Фоны_природа_вкл": {
         "name": "Nature backgrounds",
-        "tooltip": "Nature backgrounds"
+        "tooltip": "Include nature backgrounds"
       },
       "Фоны_вода_вкл": {
         "name": "Water backgrounds",
-        "tooltip": "Water backgrounds"
+        "tooltip": "Include water backgrounds"
       },
       "Фоны_комнаты_вкл": {
         "name": "Room backgrounds",
-        "tooltip": "Room backgrounds"
+        "tooltip": "Include room backgrounds"
       },
       "Фоны_фэнтези_вкл": {
         "name": "Fantasy backgrounds",
-        "tooltip": "Fantasy backgrounds"
+        "tooltip": "Include fantasy backgrounds"
       },
       "Свет_вкл": {
         "name": "Lighting enabled",
-        "tooltip": "Lighting enabled"
+        "tooltip": "Enable lighting"
       },
       "Время_вкл": {
         "name": "Time enabled",
-        "tooltip": "Time enabled"
+        "tooltip": "Enable time of day"
       },
       "Атмосфера_вкл": {
         "name": "Atmosphere enabled",
-        "tooltip": "Atmosphere enabled"
+        "tooltip": "Enable atmosphere"
       },
       "Сеттинг_вкл": {
         "name": "Setting enabled",
-        "tooltip": "Setting enabled"
+        "tooltip": "Enable setting"
       },
       "Формат_промпта": {
         "name": "Prompt format",
-        "tooltip": "Prompt format"
+        "tooltip": "Format of generated prompt"
       },
       "Модель": {
         "name": "Model",
-        "tooltip": "Model"
+        "tooltip": "Target generation model"
       },
       "Стиль": {
         "name": "Style",
-        "tooltip": "Style"
+        "tooltip": "Visual style"
       },
       "Качество": {
         "name": "Quality",
-        "tooltip": "Quality"
+        "tooltip": "Generation quality"
       },
       "Quality_tokens": {
         "name": "Quality tokens",
-        "tooltip": "Quality tokens"
+        "tooltip": "Include quality tokens"
       },
       "Всё_выбирает_LLM": {
         "name": "All by LLM",
-        "tooltip": "All by LLM"
+        "tooltip": "Delegate all to LLM"
       },
       "Свобода_LLM": {
         "name": "LLM freedom",
-        "tooltip": "LLM freedom"
+        "tooltip": "LLM creative freedom"
       },
       "Запреты": {
         "name": "Bans",
-        "tooltip": "Bans"
+        "tooltip": "Additional banned terms"
       },
       "Явные_термины": {
         "name": "Explicit terms",
-        "tooltip": "Explicit terms"
+        "tooltip": "Allow explicit anatomical terms"
       },
       "config": {
         "name": "Config",
-        "tooltip": "Config"
+        "tooltip": "Config JSON from KonstCharacterConfig"
       },
       "char_1": {
         "name": "Char 1",
-        "tooltip": "Char 1"
+        "tooltip": "Character 1 description"
       },
       "char_2": {
         "name": "Char 2",
-        "tooltip": "Char 2"
+        "tooltip": "Character 2 description"
       },
       "char_3": {
         "name": "Char 3",
-        "tooltip": "Char 3"
+        "tooltip": "Character 3 description"
       },
       "char_4": {
         "name": "Char 4",
-        "tooltip": "Char 4"
+        "tooltip": "Character 4 description"
       },
       "char_5": {
         "name": "Char 5",
-        "tooltip": "Char 5"
+        "tooltip": "Character 5 description"
       },
       "char_6": {
         "name": "Char 6",
-        "tooltip": "Char 6"
+        "tooltip": "Character 6 description"
       }
     },
     "outputs": {
-      "0": {
-        "name": "output_0"
+      "LLM PROMPT": {
+        "name": "LLM PROMPT"
       },
-      "1": {
-        "name": "output_1"
+      "MODEL PROMPT": {
+        "name": "MODEL PROMPT"
       },
-      "2": {
-        "name": "output_2"
+      "WARN": {
+        "name": "WARN"
       },
-      "3": {
-        "name": "output_3"
+      "SEED": {
+        "name": "SEED"
       },
-      "4": {
-        "name": "output_4"
+      "CONFIG": {
+        "name": "CONFIG"
       }
     }
   }
